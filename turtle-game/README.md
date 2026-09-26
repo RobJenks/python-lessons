@@ -27,7 +27,7 @@ Try implementing the left, up & down functions.  Left should be very similar, we
 You can delete my "print(todo)" lines and replace them with the real code
 
 ## Part 2: Ultra graphics
-Remember there were a few functions near the start of the program which set the player shape, and the colors on the screen.  Try changing those if you want to make it more colourful
+Remember there were a few functions near the start of the program which set the player shape, and the colors on the screen.  Try changing those to make it more colourful
 
 ## Part 3: Adding new controls
 To add a new control, you just need two things:
