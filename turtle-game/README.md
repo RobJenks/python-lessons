@@ -6,7 +6,7 @@ This is a VERY simple program where you can move a shape around the screen. Your
 Copy the code from "turtle-game.py" into your IDE to get started. I've added some comments to the code explaining how it works.  You can ignore some of the sections which just do setup - they're not important.
 
 ## Things to look at first
-Starting at the top you can see we call a few functions. On line 9 we call the "player.shape" function to decide what shape our player character will be.  Just below that, we set the color of the background and the character.
+Starting at the top you can see we use a few functions. On line 9 we call the "player.shape" function to decide what shape our player character will be.  Just below that, we set the color of the background and the character.
 
 Below this you can see some functions called "move_right", "move_left" etc.  This is how the player moves. We'll add new code here first.
 
