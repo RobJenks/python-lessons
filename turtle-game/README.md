@@ -17,7 +17,12 @@ Try running the program.  You should see a window appears with a small shape ins
 ## Code to write
 
 ### 1. Movement controls
-First step is to let the player move around. I've implemented the move_right function for you. We (a) get the current X coordinate of the player, (b) add a small amount to it, (c) set the X coordinate to the new value. That makes us move positive along the X axis
+First step is to let the player move around. I've implemented the move_right function for you. We do three things:
+a) get the current X coordinate of the player
+b) add a small amount to it (10) 
+c) set the X coordinate to the new value. That makes us move positive along the X axis
+
+So if our (X, Y) position was (20, 20), when we press the right arrow we would get the current X value (20), add 10 to it, and then set our X coordinate to the new value (30).  Our new position is now (30, 20)
 
 Try implementing the left, up & down functions.  Left should be very similar, we just want to go negative along the axis.  Up & Down are the same idea, you just need to use different functions to get the current **Y** coordinate (player.**y**cor) and set the new **Y** coordinate (player.set**y**)
 
