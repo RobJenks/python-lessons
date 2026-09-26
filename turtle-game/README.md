@@ -14,13 +14,11 @@ Below the movement functions you can see some lines like "screen.onkey(...)" . T
 
 Try running the program.  You should see a window appears with a small shape inside. If you press the right arrow key, it should move. None of the other keys will work yet though
 
-## Code to write
-
-### 1. Movement controls
+## Part 1: Movement controls
 First step is to let the player move around. I've implemented the move_right function for you. We do three things:
-* a) get the current X coordinate of the player
-* b) add a small amount to it (10) 
-* c) set the X coordinate to the new value. That makes us move positive along the X axis
+* Get the current X coordinate of the player
+* Add a small amount to it (10) 
+* Set the X coordinate to the new value. That makes us move positive along the X axis
 
 So if our (X, Y) position was (20, 20), when we press the right arrow we would get the current X value (20), add 10 to it, and then set our X coordinate to the new value (30).  Our new position is now (30, 20)
 
@@ -28,25 +26,29 @@ Try implementing the left, up & down functions.  Left should be very similar, we
 
 You can delete my "print(todo)" lines and replace them with the real code
 
-### 2. Ultra graphics
+## Part 2: Ultra graphics
 Remember there were a few functions near the start of the program which set the player shape, and the colors on the screen.  Try changing those if you want to make it more colourful
 
-### 3. Adding new controls
+## Part 3: Adding new controls
 To add a new control, you just need two things:
-1. A new function (e.g. copy the "move_left" function"), and give it a new name 
-2. A new "screen.onkey(..)" line below it, along with the others. This says "when this key is pressed, call my function".  I added some comments there to show how. Important: your function needs to come *before* the "onkey()" line. 
+* A new function (e.g. copy the "move_left" function"), and give it a new name 
+* A new "screen.onkey(..)" line below it, along with the others. This says "when this key is pressed, call my function".  I added some comments there to show how. Important: your function needs to come *before* the "onkey()" line. 
 
-**Idea 1**: You already saw some functions to change the player color or shape. And now you know how to make things happen when a key is pressed.  So try adding a new control - when the player presses "R", the player turns Red
+### Idea 1 - Changing player colour
+You already saw some functions to change the player color or shape. And now you know how to make things happen when a key is pressed.  So try adding a new control - when the player presses "R", the player turns Red
 
-**Idea 2**: You're moving the player by 10 each time when the arrow keys are pressed.  If you change that number, they'd move faster or slower. You could add keys to change the player speed.  Hint: you may want to make a variable for the player_speed, and use it instead of "10" in the code.  Then your key function can change that "player_speed" variable
+### Idea 2 - Speedup / slowdown
+You're moving the player by 10 each time when the arrow keys are pressed.  If you change that number, they'd move faster or slower. You could add keys to change the player speed.  Hint: you may want to make a variable for the player_speed, and use it instead of "10" in the code.  Then your key function can change that "player_speed" variable
 
-**Idea 3**: The "turtle" character that we're using has two other functions: "pendown()" and "penup()"
+### Idea 3 - Drawing on the screen
+The "turtle" character that we're using has two other functions: "pendown()" and "penup()"
   * `pendown()` puts the "pen down", i.e. when the player moves around, it will draw a line on the screen where it moves
   * `penup()` lifts the pen up, the opposite, so the player stops drawing lines where it moves any more
 
 You may have seen that we called "penup()" at the very start of the program on line 6.  You could now add controls to put the pen down or up, so you can draw pictures on the screen as you move
 
-**Idea 4**: (Getting hard now) You already know how to change the player position - you're calling "setx" / "sety" at the moment to move them each time the key is pressed.  But you don't need to move them a little bit each time.  You could also add a "teleport" function which jumps them to a random position on the screen!
+### Idea 4 - Teleporter (Getting hard now) 
+You already know how to change the player position - you're calling "setx" / "sety" at the moment to move them each time the key is pressed.  But you don't need to move them a little bit each time.  You could also add a "teleport" function which jumps them to a random position on the screen!
 
 You want to pick a random position, and we've already seen how to get a random number in the dice program.  Take a look at your github for the `random.randint` function we used before. Remember it takes a minimum and a maximum value, and will choose a random value between them.
 
