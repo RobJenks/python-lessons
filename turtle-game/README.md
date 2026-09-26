@@ -31,8 +31,8 @@ Remember there were a few functions near the start of the program which set the 
 
 ## Part 3: Adding new controls
 To add a new control, you just need two things:
-* A new function (e.g. copy the "move_left" function"), and give it a new name 
-* A new "screen.onkey(..)" line below it, along with the others. This says "when this key is pressed, call my function".  I added some comments there to show how. Important: your function needs to come *before* the "onkey()" line. 
+* Create a new function (e.g. copy the "move_left" function", and give it a new name)
+* Add another "screen.onkey(..)" line below, along with the others. This says "when this key is pressed, call my function".  I added some comments there to show how. Important: your function needs to come first, then the onkey line below it 
 
 ### Idea 1 - Changing player colour
 You already saw some functions to change the player color or shape. And now you know how to make things happen when a key is pressed.  So try adding a new control - when the player presses "R", the player turns Red
