@@ -10,8 +10,8 @@ player.penup()
 player.shape("square")
 
 # Set the screen colours
-screen.bgcolor("white")  # Background colour
-player.color("black")    # Player colour
+screen.bgcolor("yellow")  # Background colour
+player.color("blue")    # Player colour
 
 
 # === These functions make the player move ===
@@ -31,18 +31,37 @@ def move_right():
 def move_left():
     # Need to implement this, it should be similar to move_right but we're going NEGATIVE in the X axis this time. So
     # we want to REDUCE our X coordinate
-    print("todo")
-
+    current_x = player.xcor()
+    new_x = current_x - 10
+    player.setx(new_x)
 
 def move_up():
     # Need to implement this. Up/down is the Y axis. player has "ycor" and "sety" methods, just like for the X axis above
     # e.g. player.ycor() will get the current Y coordinate of the player
-    print("todo")
+
+    # You don't always need to create new variables for every step - you can combine functions together
+    new_y = player.ycor() + 10
+    player.sety(new_y)
 
 
 def move_down():
-   # Just like above, you've got this 
-   print("todo")
+    # Like above, we can combine functions together. But sometimes it's clearer to keep it on several lines
+    player.sety(player.ycor() - 10)
+
+def change_col():
+    player.color("red")
+
+def pen_up():
+    player.penup()
+
+def pen_down():
+    player.pendown()
+
+def teleport():
+    new_x = random.randint(0, 600)
+    new_y = random.randint(0, 400)
+    player.setx(new_x)
+    player.sety(new_y)
 
 
 # This is where you enable player controls.  Don't worry about how it works exactly (not important). But you can 
@@ -55,6 +74,10 @@ screen.onkey(move_left, "Left")    # When the player presses the left arrow, cal
 screen.onkey(move_right, "Right")  # When the player presses the right arrow, call the "move_right" function
 screen.onkey(move_up, "Up")        # ...
 screen.onkey(move_down, "Down")
+screen.onkey(change_col, "c")
+screen.onkey(pen_up, "u")
+screen.onkey(pen_down, "d")
+screen.onkey(teleport, "t")
 
 
 # === Ignore this stuff, it just starts everything running ===
