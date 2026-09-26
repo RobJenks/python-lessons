@@ -27,7 +27,7 @@ Try implementing the left, up & down functions.  Left should be very similar, we
 You can delete my "print(todo)" lines and replace them with the real code
 
 ## Part 2: Ultra graphics
-Remember there were a few functions near the start of the program which set the player shape, and the colors on the screen.  Try changing those to make it more colourful
+Remember there were a few functions near the start of the program which set the player shape, and the colors on the screen.  Try changing those values to make it more colourful
 
 ## Part 3: Adding new controls
 To add a new control, you just need two things:
@@ -45,7 +45,7 @@ The "turtle" character that we're using has two other functions: "pendown()" and
 You may have seen that we called "penup()" at the very start of the program on line 6.  You could now add controls to put the pen down or up, so you can draw pictures on the screen as you move
 
 ### Idea 3 - Teleporter (Getting hard now) 
-You already know how to change the player position - you're calling "setx" / "sety" at the moment to move them each time the key is pressed.  But you don't need to move them a little bit each time.  You could also add a "teleport" function which jumps them to a random position on the screen!
+You already know how to change the player position - you're calling "setx" / "sety" at the moment to move them each time the key is pressed.  But you don't need to move them a little bit each time.  You could also add a "teleport" function which jumps them to a random position on the screen.
 
 You want to pick a random position, and we've already seen how to get a random number in the dice program.  Take a look at your github for the `random.randint` function we used before. Remember it takes a minimum and a maximum value, and will choose a random value between them.
 
