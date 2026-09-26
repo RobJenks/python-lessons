@@ -24,7 +24,7 @@ First step is to let the player move around. I've implemented the move_right fun
 
 So if our (X, Y) position was (20, 20), when we press the right arrow we would get the current X value (20), add 10 to it, and then set our X coordinate to the new value (30).  Our new position is now (30, 20)
 
-Try implementing the left, up & down functions.  Left should be very similar, we just want to go negative along the axis.  Up & Down are the same idea, you just need to use different functions to get the current **Y** coordinate (player.**y**cor) and set the new **Y** coordinate (player.set**y**)
+Try implementing the left, up & down functions.  Left should be very similar, we just want to go negative along the X axis.  Up & Down are the same idea, you just need to use different functions to get the current **Y** coordinate (player.**y**cor) and set the new **Y** coordinate (player.set**y**)
 
 You can delete my "print(todo)" lines and replace them with the real code
 
@@ -32,7 +32,9 @@ You can delete my "print(todo)" lines and replace them with the real code
 Remember there were a few functions near the start of the program which set the player shape, and the colors on the screen.  Try changing those if you want to make it more colourful
 
 ### 3. Adding new controls
-To add a new control, you just need to add a new function (e.g. copy the "move_left" function"), and then add a the "screen.onkey(..)" line below it that says "when this key is pressed, call my function".  I added some comments there to show how.  You can copy e.g. "move_left" and change the key (Important: you just need to make sure your function comes ABOVE the "screen.onkey" line in the file)
+To add a new control, you just need two things:
+1. A new function (e.g. copy the "move_left" function"), and give it a new name 
+2. A new "screen.onkey(..)" line below it, along with the others. This says "when this key is pressed, call my function".  I added some comments there to show how. Important: your function needs to come *before* the "onkey()" line. 
 
 **Idea 1**: You already saw some functions to change the player color or shape. And now you know how to make things happen when a key is pressed.  So try adding a new control - when the player presses "R", the player turns Red
 
