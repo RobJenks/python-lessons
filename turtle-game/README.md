@@ -37,17 +37,14 @@ To add a new control, you just need two things:
 ### Idea 1 - Changing player colour
 You already saw some functions to change the player color or shape. And now you know how to make things happen when a key is pressed.  So try adding a new control - when the player presses "R", the player turns Red
 
-### Idea 2 - Speedup / slowdown
-You're moving the player by 10 each time when the arrow keys are pressed.  If you change that number, they'd move faster or slower. You could add keys to change the player speed.  Hint: you may want to make a variable for the player_speed, and use it instead of "10" in the code.  Then your key function can change that "player_speed" variable
-
-### Idea 3 - Drawing on the screen
+### Idea 2 - Drawing on the screen
 The "turtle" character that we're using has two other functions: "pendown()" and "penup()"
   * `pendown()` puts the "pen down", i.e. when the player moves around, it will draw a line on the screen where it moves
   * `penup()` lifts the pen up, the opposite, so the player stops drawing lines where it moves any more
 
 You may have seen that we called "penup()" at the very start of the program on line 6.  You could now add controls to put the pen down or up, so you can draw pictures on the screen as you move
 
-### Idea 4 - Teleporter (Getting hard now) 
+### Idea 3 - Teleporter (Getting hard now) 
 You already know how to change the player position - you're calling "setx" / "sety" at the moment to move them each time the key is pressed.  But you don't need to move them a little bit each time.  You could also add a "teleport" function which jumps them to a random position on the screen!
 
 You want to pick a random position, and we've already seen how to get a random number in the dice program.  Take a look at your github for the `random.randint` function we used before. Remember it takes a minimum and a maximum value, and will choose a random value between them.
